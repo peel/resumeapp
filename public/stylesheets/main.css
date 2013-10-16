@@ -1,0 +1,214 @@
+/* page context */
+.page{background-color:#fff;}
+.pagenumber{position:absolute;top:2.8em;right:3em;}
+.pagecontact{position:absolute;bottom:4em;width:100%;text-align:center;}
+
+/* global */
+a{text-decoration: none;color:#000;}
+a:hover{text-decoration: underline;}
+.rightpadding{padding:0 2em 0 0;}
+.leftpadding{padding:0 0 0 2em;}
+
+/* cover pages */
+.cover{margin-top:50%;}
+.left{margin-left:30%;}
+.right{margin-left:25%;text-align:right;}
+.cover p{text-align:justify;line-height:1.8;margin:2em 0;}
+.contactList{list-style:none;padding:0;font-style:italic;}
+.contactList li{line-height:1.3;}
+
+.nametag{margin:3em 0 2em 0;text-align:center;}
+
+.consent{margin:20% 0 0 0;width:70%;float:right;}
+.consent p{line-height:1.25;text-align:right;}
+.skill_level {display: inline-block;background: #EEE;height: 1.5em;border-radius: 3px;position: relative;overflow: hidden;}
+.skill_set {background: #535353;display: block;height: 100%;position: absolute;top: 0;left: 0;border-radius: 3px;}
+
+.multirow{line-height:1.5em;margin:2em 0;}
+.multirow div{line-height: 1.5em}
+.sectionheader{text-align:center;margin:4em 0 2em 0;}
+.pageheader{text-align:center;margin:4em 0 2em 0;}
+
+@media print{
+    .pagenumber{position:absolute;top:2em;right:3em;font-size:1em;}
+    .pagecontact{position:absolute;bottom:3em;width:100%;text-align:center;font-size:1em;}
+    .sectionheader{text-align:center;margin:2em 0 2em 0;}
+    .pageheader{text-align:center;margin:2em 0 2em 0;}
+}
+
+#sidebar { /* Sidebar */
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  width:250px;
+  padding:0;
+  margin:0px;
+  overflow:auto;
+}
+#page-container { /* PDF container */
+  position:absolute;
+  top:0;
+  left:0px;
+  margin:0; 
+  padding:0;
+  border:0; /* required for lazy page loading in pdf2htmlEX.js (page visibility test) */
+}
+@media screen {
+  /* for sidebar */
+  #sidebar.opened + #page-container { left:250px; }
+  #page-container {
+    /* `bottom' and `right' are required for lazy page loading in pdf2htmlEX.js (page visibility test)
+     * alternatively you may set width and height
+     */
+    bottom:0;
+    right:0;
+    overflow:auto;
+  }
+}
+@media print { 
+  @page { margin:0; }
+  html { margin:0; }
+  body { 
+    margin:0; 
+    -webkit-print-color-adjust:exact; /* enable printing background images for WebKit */
+  }
+  #sidebar { display:none; }
+  #page-container {
+    width:auto;
+    height:auto;
+    overflow:visible;
+    background-color:transparent;
+  }
+  .d { display:none; }
+}
+/* Part 2: Page Elements: Modify with caution
+ * The followings are base classes, some of which are meant to be override by PDF specific classes
+ * So do not increase the specificity (e.g. ".classname" -> "#page-container .classname")
+ */
+.pd { /* page decoration */
+  position:relative;
+  border: 0;
+  overflow: hidden;
+}
+.pf { /* page */
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:white;
+  overflow: hidden;
+  margin:0; 
+  border:0; /* required by pdf2htmlEX.js for page visibility test */
+}
+.pc { /* content of a page */
+  position:absolute;
+  border:0;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  display:block;
+  /* set transform-origin for scaling */
+  transform-origin:0% 0%;
+  -ms-transform-origin:0% 0%;
+  -moz-transform-origin:0% 0%;
+  -webkit-transform-origin:0% 0%;
+  -o-transform-origin:0% 0%;
+}
+.pc.opened { /* used by pdf2htmlEX.js, to show/hide pages */
+  display:block;
+}
+
+@media print {
+  .pd {
+    margin:0;
+    box-shadow:none;
+    page-break-after:always;
+    page-break-inside:avoid;
+  }
+  @-moz-document url-prefix() {
+    /* fix page truncation for FireFox */
+    .pd {
+      overflow:visible;
+      border:1px solid #FFFFFF;
+    }
+    .pf {overflow:visible;}
+    .pc {overflow:visible;}
+  }
+}
+
+.t { /* text line */
+  position:absolute;
+  font-size:1px;
+  transform-origin:0% 100%;
+  -ms-transform-origin:0% 100%;
+  -moz-transform-origin:0% 100%;
+  -webkit-transform-origin:0% 100%;
+  -o-transform-origin:0% 100%;
+}
+span { /* text blocks within a line */
+  position:relative;
+  vertical-align: baseline;
+  /* _<id> for spaces may need display:inline, which will override this */ 
+  display:inline-block;
+}
+._ { /* text shift */
+  color:transparent;
+  z-index:-1;
+}
+
+@media screen { 
+  #page-container {
+    background-color:#eee;
+    -moz-transition:left 500ms;
+    -webkit-transition:left 500ms;
+    -o-transition:left 500ms;
+    transition:left 500ms:
+  }
+  .pd {
+    margin: 13px auto;
+    box-shadow: 1px 1px 3px 1px #333;
+  }
+
+}
+
+
+.ff0{font-family:sans-serif;visibility:hidden;}
+@font-face{font-family:ff1;src:url(../../../../../Dropbox/Active/cv/css/f1.ttf)format("truetype");}.ff1{font-family:ff1;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url(../../../../../Dropbox/Active/cv/css/f2.ttf)format("truetype");}.ff2{font-family:ff2;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff3;src:url(../../../../../Dropbox/Active/cv/css/f3.ttf)format("truetype");}.ff3{font-family:ff3;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff4;src:url(../../../../../Dropbox/Active/cv/css/f4.ttf)format("truetype");}.ff4{font-family:ff4;line-height:0.973633;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff5;src:url(../../../../../Dropbox/Active/cv/css/f5.ttf)format("truetype");}.ff5{font-family:ff5;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff6;src:url(../../../../../Dropbox/Active/cv/css/f6.ttf)format("truetype");}.ff6{font-family:ff6;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+.m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-moz-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-o-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
+.fc2{color:rgb(0,0,0);}
+.fc3{color:rgb(101,98,99);}
+.fc1{color:rgb(35,31,32);}
+.fc0{color:rgb(0,173,239);}
+.fs4{font-size:1.100000em;}
+.fs2{font-size:1.450000em;}
+.fs3{font-size:1.725000em;}
+.fs1{font-size:1.875000em;}
+.fs0{font-size:2.875000em;}
+.h6{height:21.177734px;}
+.h3{height:27.228516px;}
+.h1{height:66.558594px;}
+.h0{height:1683.78px;}
+.w0{width:1190.552px;}
+@media print{
+.fs4{font-size:1.100000em;}
+.fs2{font-size:1.550000em;}
+.fs3{font-size:1.725000em;}
+.fs1{font-size:1.975000em;}
+.fs0{font-size:2.875000em;}
+.h6{height:28.236979pt;}
+.h3{height:36.304688pt;}
+.h1{height:88.744792pt;}
+.h0{height:1122.520000pt;}
+.w0{width:793.701333pt;}
+}

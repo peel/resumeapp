@@ -1,0 +1,16 @@
+@(company: String, role: String, letterEnabled: Boolean)
+
+@main(Messages("author.name")+" - "+Messages("author.role")+" - "+Messages("application.name")) {
+
+    @covers.front()
+
+    @history(company, role)
+
+    @skills()
+
+    @if(letterEnabled){
+        @letter(company, role))
+    }
+
+    @covers.back()
+}

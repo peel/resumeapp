@@ -1,0 +1,1 @@
+application.name = Piotr Limanowski - Programista Java & Scala - CV
