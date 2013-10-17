@@ -1,4 +1,19 @@
 application.name = Resume
+
+app.mobile = Mobile
+app.url = Website
+app.phone = Phone
+app.email = Email
+
+app.consent = I hereby give consent for my personal data included in my offer to be processed for the purposes of recruitment, in accordance with the Personal Data Protection Act dated 29.08.1997 (uniform text: Journal of Laws of the Republic of Poland 2002 No 101, item 926 with further amendments).
+
 author.name = Piotr Limanowski
-author.role = Java & Scala developer
+author.role = Java & Scala Developer
+author.about.summary = A pragmatic software engineering professional with creative talent, analytical abilities, great people skills and passion. I have always been an appreciated team worker and eager to work in new technologies new-experience-seeker. Above all I am a paying attention to detail open-source enthusiast and commiter.
+
 author.phone = +48 698 794 991
+author.url = peel.github.io
+author.email = plimanowski@icloud.com
+author.twitter = @peel
+author.linkedin = linkedin.com/in/plimanowski
+author.github = github.com/peel

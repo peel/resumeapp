@@ -1,0 +1,10 @@
+@(content: Html)
+
+<div class="pd page w0 h0">
+    <div class="ff2 fs2 fc1 pagenumber">Page of</div>
+    <div class="row pagecontact">
+        <div class="ff3 fs2 fc0">@Messages("app.phone"): <span class="fc2">@Messages("author.phone")</span> @Messages("app.url"): <span class="fc2">@Messages("author.url")</span> @Messages("app.email"): <span class="fc2">@Messages("author.email")</span>
+        </div>
+    </div>
+    @content
+</div>

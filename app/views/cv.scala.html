@@ -1,15 +1,15 @@
 @(company: String, role: String, letterEnabled: Boolean)
 
-@main(Messages("author.name")+" - "+Messages("author.role")+" - "+Messages("application.name")) {
+@formatter.main(Messages("author.name")+" - "+Messages("author.role")+" - "+Messages("application.name")) {
 
     @covers.front()
 
-    @history(company, role)
+    @pages.history(company, role)
 
-    @skills()
+    @pages.skills()
 
     @if(letterEnabled){
-        @letter(company, role))
+        @pages.letter(company, role))
     }
 
     @covers.back()
