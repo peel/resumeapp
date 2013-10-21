@@ -1,0 +1,140 @@
+{
+    "name": "Piotr Limanowski",
+    "role": "Java & Scala Developer",
+    "about": "A pragmatic software engineering professional with creative talent, analytical abilities, great people skills and passion. I have always been an appreciated team worker and eager to work in new technologies new-experience-seeker. Above all I am a paying attention to detail open-source enthusiast and commiter.",
+    "contact": {
+       "phone": "+48 698 794 991",
+       "email": "peel.github.io",
+       "url": "plimanowski@icloud.com"
+    },
+    "social": {
+       "twitter": "@peel",
+        "linkedin": "linkedin.com/in/plimanowski",
+        "github": "github.com/peel"
+    },
+    "jobs":[
+        {
+            "period": "",
+            "company": "",
+            "role": "",
+            "location": "",
+            "description": ""
+        },
+        {
+            "period": "",
+            "company": "",
+            "role": "",
+            "location": "",
+            "description": ""
+        },
+        {
+            "period": "",
+            "company": "",
+            "role": "",
+            "location": "",
+            "description": ""
+        },
+        {
+            "period": "",
+            "company": "",
+            "role": "",
+            "location": "",
+            "description": ""
+        }
+    ],
+    "schools":[
+        {
+            "period": "",
+            "name": "",
+            "location": "",
+            "description": ""
+        },
+        {
+            "period": "",
+            "name": "",
+            "location": "",
+            "description": ""
+        }
+    ],
+    "skills":[
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        }
+    ],
+    "competencies":[
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        }
+    ],
+    "interests":[
+        {
+            "name": "",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 100,
+            "description": ""
+        },
+        {
+            "name": "",
+            "level": 80,
+            "description": ""
+        }
+    ]
+}

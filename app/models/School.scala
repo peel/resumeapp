@@ -1,13 +1,10 @@
 package models
 
-import play.api.db.DB
-import anorm._
+import play.api.libs.json.Json
 
-case class School(period : String, school: String, desc: String) {
-}
+
+case class School(period : String, name: String, location: String, description: String)
 
 object School{
-  def getAll = {
-    DB.withConnection{implicit c => val result: Boolean = SQL("Select 1").execute()}
-  }
+  implicit val schoolFmt = Json.format[School]
 }
