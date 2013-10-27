@@ -1,3 +1,21 @@
+@(competencies: Seq[Competency], interests: Seq[Interest])
+
+@htmlWide(value: PersonValue) =@{
+    Html("""
+        <div class="row multirow">
+            <div class="col-md-12 col-lg-12">
+                <div class="skill_box col-md-3 col-lg-3 leftpadding">
+                    <div class="ff5 fs2 fc1 ">"""+value.name+"""</div>
+                    <div class="ff1 fs4 fc1 ">"""+value.description+"""</div>
+                </div>
+                <div class="col-md-9 col-lg-9 skill_level rightpadding">
+                    <div class="skill_set" data-skill=""""+value.level+"""" style="overflow: hidden; width: """+value.level+"""%; "></div>
+                </div>
+            </div>
+        </div>
+         """)
+}
+
 @formatter.page{
 <!-- Skills & Competencies -->
 
@@ -80,95 +98,7 @@
     </div>
 
     <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 ">Java EE Stack</div>
-                <div class="ff1 fs4 fc1 ">Weblogic, EJB, JMS, WS, JPA, Maven</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="75" style="overflow: hidden; width: 75%; "></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Scala Stack</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">Scala, Play!, SBT</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="50" style="overflow: hidden; width: 50%; "></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Oracle Integration</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">Service Bus, SOA Suite</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="80" style="overflow: hidden; width: 80%; "></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Web Stack</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">HTML, JavaScript, CSS</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="80" style="overflow: hidden; width: 80%; "></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Design & Architecture</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">SOA, Integration, Object-Orientation</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="75" style="overflow: hidden; width: 75%; "></div>
-            </div>
-        </div>
-    </div>
-
-        <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Development Utils</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">TDD, Git/SVN VCS</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="75" style="overflow: hidden; width: 75%; "></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- competency -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Automation</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">Ruby, Vagrant, Puppet</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="50" style="overflow: hidden; width: 50%; "></div>
-            </div>
-        </div>
-    </div>
+    @competencies.map(c => htmlWide(c))
 
     <!-- interests -->
     <div class="row sectionheader">
@@ -177,28 +107,5 @@
     </div>
 
     <!-- interest -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Pattern Recognition</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">RImage Processing, Face Recognition</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="75" style="overflow: hidden; width: 75%;"></div>
-            </div>
-        </div>
-    </div>
-
-        <!-- interest -->
-    <div class="row multirow">
-        <div class="col-md-12 col-lg-12">
-            <div class="skill_box col-md-3 col-lg-3 leftpadding">
-                <div class="ff5 fs2 fc1 sc0 ls1">Lifestyle culture</div>
-                <div class="ff1 fs4 fc1 sc0 ls1">Technology, Sneakers, Design</div>
-            </div>
-            <div class="col-md-9 col-lg-9 skill_level rightpadding">
-                <div class="skill_set" data-skill="75" style="overflow: hidden; width: 75%; "></div>
-            </div>
-        </div>
-    </div>
+    @interests.map(i => htmlWide(i))
 }

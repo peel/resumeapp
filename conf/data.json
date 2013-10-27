@@ -14,51 +14,66 @@
     },
     "jobs":[
         {
-            "period": "",
-            "company": "",
-            "role": "",
-            "location": "",
-            "description": ""
+            "period": "Jan 2012 - Present",
+            "company": "Nordea IT Office",
+            "role": "Solution Architect",
+            "location": "Gdynia, PL",
+            "description": "Design and development of banking middleware services based on Java EE stack. Legacy integration and facade development.\nNotable projects: automated file delivery services, 3rd party customer web APIs, DDD-based customer data processing, rating APIs."
         },
         {
-            "period": "",
-            "company": "",
-            "role": "",
-            "location": "",
-            "description": ""
+            "period": "April 2011 - Dec 2011",
+            "company": "Nordea IT Office",
+            "role": "Software Developer",
+            "location": "Gdynia, PL",
+            "description": "Development of integration solutions in Java EE stack with Oracle Middleware toolkit.\n Notable projects: legacy integration solutions, internal tools for data management."
         },
         {
-            "period": "",
-            "company": "",
-            "role": "",
-            "location": "",
-            "description": ""
+            "period": "Oct 2010 - April 2011",
+            "company": "KAOS Software via BUWiWM",
+            "role": "Java Developer",
+            "location": "Adelaide, AUS",
+            "description": "Development of scalable, highly available, data integration, processing and analysis tools for education sector based on Spring Core stack.\n Notable projects: Real time batch-data processing and analysis tool."
         },
         {
-            "period": "",
-            "company": "",
-            "role": "",
-            "location": "",
-            "description": ""
+            "period": "Feb 2009 - Oct 2010",
+            "company": "PixNet",
+            "role": "Web Developer",
+            "location": "Gdynia, PL",
+            "description": "Design and development of face recognition and photo manipulation service. Mobile soft-ware development for social networking applications. Scalable web platform development.\n Notable projects: face recognition, photo manipulation and mobile web applications."
         }
     ],
     "schools":[
         {
-            "period": "",
-            "name": "",
-            "location": "",
-            "description": ""
+            "period": "2005 - 2010",
+            "name": "Gdansk University of Technology - ETI Faculty",
+            "location": "Gdansk, PL",
+            "description": "MA thesis: “Face Recognition in the crowd using high resolution camera image”"
         },
         {
-            "period": "",
-            "name": "",
-            "location": "",
-            "description": ""
+            "period": "2002 - 2005",
+            "name": "2nd High School in Olsztyn",
+            "location": "Olsztyn, PL",
+            "description": "Tech profile: Maths, Physics, Computer Science"
         }
     ],
     "skills":[
         {
-            "name": "",
+            "name": "Communication",
+            "level": 80,
+            "description": ""
+        },
+        {
+            "name": "Problem Solving",
+            "level": 90,
+            "description": ""
+        },
+        {
+            "name": "Organization",
+            "level": 75,
+            "description": ""
+        },
+        {
+            "name": "Learning",
             "level": 90,
             "description": ""
         },
@@ -68,73 +83,63 @@
             "description": ""
         },
         {
-            "name": "",
-            "level": 90,
-            "description": ""
-        },
-        {
-            "name": "",
-            "level": 90,
-            "description": ""
-        },
-        {
-            "name": "",
-            "level": 90,
-            "description": ""
-        },
-        {
-            "name": "",
+            "name": "Commitment",
             "level": 90,
             "description": ""
         }
     ],
     "competencies":[
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Java EE Stack",
+            "level": 75,
+            "description": "Weblogic, EJB, JMS, WS, JPA, Maven"
         },
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Scala Stack",
+            "level": 40,
+            "description": "Scala, Play!, SBT"
         },
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Oracle Integration",
+            "level": 80,
+            "description": "Service Bus, SOA Suite"
         },
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Web Stack",
+            "level": 80,
+            "description": "HTML, JavaScript, CSS"
         },
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Design & Architecture",
+            "level": 75,
+            "description": "SOA, Integration, Object-Orientation"
         },
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Development Utils",
+            "level": 75,
+            "description": "IntelliJ IDEA, Git/Svn"
+        },
+        {
+            "name": "Automation",
+            "level": 50,
+            "description": "Ruby, Vagrant, Puppet"
         }
     ],
     "interests":[
         {
-            "name": "",
-            "level": 90,
-            "description": ""
+            "name": "Pattern Recognition",
+            "level": 75,
+            "description": "Image Processing, Face Recognition"
         },
         {
-            "name": "",
+            "name": "Gadgets & Lifehacking",
             "level": 100,
-            "description": ""
+            "description": "Home automation"
         },
         {
-            "name": "",
-            "level": 80,
-            "description": ""
+            "name": "Lifestyle culture",
+            "level": 75,
+            "description": "Technology, Sneakers, Design"
         }
     ]
 }

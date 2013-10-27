@@ -1,16 +1,16 @@
-@(company: String, role: String, letterEnabled: Boolean)
+@(company: String, role: String, author: Author, letter: String, letterEnabled: Boolean)
 
-@formatter.main(Messages("author.name")+" - "+Messages("author.role")+" - "+Messages("application.name")) {
+@formatter.main(author.name+" - "+author.role+" - "+Messages("application.name")) {
 
-    @covers.front()
+    @covers.front(about=author.about, name=author.name, role=author.role, contact=author.contact, social=author.social)
 
-    @pages.history(company, role)
+    @pages.history(author.role, author.name, author.jobs, author.schools)
 
-    @pages.skills()
+    @pages.skills(author.competencies, author.interests)
 
     @if(letterEnabled){
-        @pages.letter(company, role))
+        @pages.letter(company, role, author, letter))
     }
 
-    @covers.back()
+    @covers.front(name=author.name,role=author.role,about=author.about,  contact=author.contact, social=author.social)
 }
