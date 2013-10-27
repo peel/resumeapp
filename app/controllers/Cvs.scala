@@ -1,18 +1,18 @@
 package controllers
 
 import play.api.mvc.{Action, Controller}
-import play.api.libs.json.Json
-import scala.io.Source
-import models.Author
+import play.api.libs.json.{JsValue, Json, Reads}
+import models.{Letter, Author}
+import utils.DataApi
 
 object Cvs extends Controller {
   def get(company: String, role: String, letterEnabled: Boolean) = Action{
-    val source = Source.fromFile("conf/data.json").getLines().mkString
-    val sourceLetter = Source.fromFile("conf/letter.json").getLines().mkString
-    val jsonLetter = Json.parse(sourceLetter)
-    val author = Json.parse(source).as[Author]
-    val letter = (jsonLetter \ "letter").as[String].format(author.name)
+    val author = DataApi.getCvData[Author]("conf/data.json")
+    val letter = DataApi.getCvData[Letter]("conf/letter.json")
+
     Ok(views.html.cv(company, role, author, letter, letterEnabled))
   }
 
+
+  def getPdf(company: String, role: String, letterEnabled: Boolean) = play.mvc.Results.TODO
 }

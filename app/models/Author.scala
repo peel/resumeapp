@@ -1,6 +1,6 @@
 package models
 
-import play.api.libs.json.Json
+import play.api.libs.json.{JsValue, Format, Json}
 
 
 case class Author(name: String,
@@ -13,6 +13,8 @@ case class Author(name: String,
                   skills: Seq[Skill],
                   competencies: Seq[Competency],
                   interests: Seq[Interest])
+
 object Author{
   implicit val authorFmt = Json.format[Author]
 }
+

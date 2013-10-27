@@ -1,4 +1,4 @@
-@(company: String, role: String, author: Author, letter: String)
+@(company: String, role: String, author: Author, letter: Letter)
 @import java.text.SimpleDateFormat
 
 @date = @{
@@ -18,11 +18,11 @@
         </div>
         <div class="col-md-9 col-lg-9 ff1 fs2 fc2 rightpadding" style="line-height:1.5em;text-align:justify;">
             <p>@date</p>
-            <p>@Messages("app.letter.greeting")</p>
+            <p>@letter.greeting</p>
             <p>
-                @letter
+                @letter.content
             </p>
-            <p>@Messages("app.letter.sincerely"),</p>
+            <p>@letter.sincerely,</p>
             <p>@author.name</p>
         </div>
     </div>
