@@ -3,17 +3,33 @@ package utils
 import org.specs2.mutable._
 import org.specs2.runner._
 import org.junit.runner._
-import models.Author
+import models._
 
 @RunWith(classOf[JUnitRunner])
 class DataApiSpec extends Specification{
   val dataApi= new DataApi with MemDataSource
+  val cvData: Author = dataApi.getCvData[Author]("")
 
-  "DataApi" should {
+  "CvDataParser" should {
     "create" in {
-        dataApi.getCvData[Author]("") must haveClass[Author]
+      "an Author object" in {
+        cvData must haveClass[Author]
       }
+      "a Jobs collection" in{
+        cvData.jobs(0) must haveClass[Job]
+      }
+      "a Schools collection" in {
+        cvData.schools(0) must haveClass[School]
+      }
+      "a Skills collection" in {
+        cvData.skills(0) must haveClass[Skill]
+      }
+      "an Interests collection" in {
+        cvData.interests(0) must haveClass[Interest]
+      }
+      "out of JSON configuration"
     }
+  }
 }
 
 trait MemDataSource extends DataSource{
