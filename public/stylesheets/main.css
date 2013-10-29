@@ -179,12 +179,12 @@ span { /* text blocks within a line */
 
 
 .ff0{font-family:sans-serif;visibility:hidden;}
-@font-face{font-family:ff1;src:url(f1.ttf)format("truetype");}.ff1{font-family:ff1;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff2;src:url(f2.ttf)format("truetype");}.ff2{font-family:ff2;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff3;src:url(f3.ttf)format("truetype");}.ff3{font-family:ff3;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff4;src:url(f4.ttf)format("truetype");}.ff4{font-family:ff4;line-height:0.973633;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff5;src:url(f5.ttf)format("truetype");}.ff5{font-family:ff5;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff6;src:url(f6.ttf)format("truetype");}.ff6{font-family:ff6;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff1;src:url(Georgia.ttf)format("truetype");}.ff1{font-family:ff1;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url(Georgia Italic.ttf)format("truetype");}.ff2{font-family:ff2;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff3;src:url(Georgia Italic.ttf)format("truetype");}.ff3{font-family:ff3;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff4;src:url(Georgia.ttf)format("truetype");}.ff4{font-family:ff4;line-height:0.973633;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff5;src:url(Georgia Bold.ttf)format("truetype");}.ff5{font-family:ff5;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff6;src:url(Georgia Italic.ttf)format("truetype");}.ff6{font-family:ff6;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
 .m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-moz-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-o-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
 .fc2{color:rgb(0,0,0);}
 .fc3{color:rgb(101,98,99);}

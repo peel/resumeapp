@@ -3,7 +3,7 @@ package utils
 import play.api.libs.json.{Json, Reads}
 import scala.io.Source
 
-object DataApi {
+class DataApi {this: DataSource =>
   def getCvData[T: Reads](s: String): T = {
     val source = getSource(s)
     parseGen[T](source)
@@ -13,8 +13,15 @@ object DataApi {
     Json.parse(s).as[T]
   }
 
-  private def getSource(filename: String) = {
+}
+
+trait DataSource{
+  def getSource(filename: String): String
+}
+
+trait FileDataSource extends DataSource{
+  def getSource(filename: String) = {
     Source.fromFile(filename).getLines().mkString
   }
-
 }
+
