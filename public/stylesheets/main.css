@@ -26,8 +26,8 @@ a:hover{text-decoration: underline;}
 
 .multirow{line-height:1.5em;margin:2em 0;}
 .multirow div{line-height: 1.5em}
-.sectionheader{text-align:center;margin:4em 0 2em 0;}
-.pageheader{text-align:center;margin:4em 0 2em 0;}
+.sectionheader{text-align:center;margin:6em 0 2em 0;}
+.pageheader{text-align:center;margin:5em 0 2em 0;}
 
 @media print{
     .pagenumber{position:absolute;top:2em;right:3em;font-size:1em;}
@@ -179,33 +179,33 @@ span { /* text blocks within a line */
 
 
 .ff0{font-family:sans-serif;visibility:hidden;}
-@font-face{font-family:ff1;src:url(Georgia.ttf)format("truetype");}.ff1{font-family:ff1;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff2;src:url(Georgia Italic.ttf)format("truetype");}.ff2{font-family:ff2;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff3;src:url(Georgia Italic.ttf)format("truetype");}.ff3{font-family:ff3;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff4;src:url(Georgia.ttf)format("truetype");}.ff4{font-family:ff4;line-height:0.973633;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff5;src:url(Georgia Bold.ttf)format("truetype");}.ff5{font-family:ff5;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
-@font-face{font-family:ff6;src:url(Georgia Italic.ttf)format("truetype");}.ff6{font-family:ff6;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff1;src:url("Georgia.ttf")format("truetype");}.ff1{font-family:ff1;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff2;src:url("Georgia Italic.ttf")format("truetype");}.ff2{font-family:ff2;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff3;src:url("Georgia Italic.ttf")format("truetype");}.ff3{font-family:ff3;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff4;src:url("Georgia.ttf")format("truetype");}.ff4{font-family:ff4;line-height:0.973633;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff5;src:url("Georgia Bold.ttf")format("truetype");}.ff5{font-family:ff5;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
+@font-face{font-family:ff6;src:url("Georgia Italic.ttf")format("truetype");}.ff6{font-family:ff6;line-height:0.973145;font-style:normal;font-weight:normal;visibility:visible;}
 .m0{transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-ms-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-moz-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-webkit-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);-o-transform:matrix(0.250000,0.000000,0.000000,0.250000,0,0);}
 .fc2{color:rgb(0,0,0);}
 .fc3{color:rgb(101,98,99);}
 .fc1{color:rgb(35,31,32);}
 .fc0{color:rgb(0,173,239);}
-.fs4{font-size:1.100000em;}
-.fs2{font-size:1.450000em;}
-.fs3{font-size:1.725000em;}
-.fs1{font-size:1.875000em;}
-.fs0{font-size:2.875000em;}
+.fs4{font-size:1.320000em;}
+.fs2{font-size:1.740000em;}
+.fs3{font-size:2.070000em;}
+.fs1{font-size:2.250000em;}
+.fs0{font-size:3.450000em;}
 .h6{height:21.177734px;}
 .h3{height:27.228516px;}
 .h1{height:66.558594px;}
 .h0{height:1683.78px;}
 .w0{width:1190.552px;}
 @media print{
-.fs4{font-size:1.100000em;}
-.fs2{font-size:1.550000em;}
-.fs3{font-size:1.725000em;}
-.fs1{font-size:1.975000em;}
-.fs0{font-size:2.875000em;}
+.fs4{font-size:1.320000em;}
+.fs2{font-size:1.740000em;}
+.fs3{font-size:2.070000em;}
+.fs1{font-size:2.250000em;}
+.fs0{font-size:3.450000em;}
 .h6{height:28.236979pt;}
 .h3{height:36.304688pt;}
 .h1{height:88.744792pt;}

@@ -24,4 +24,3 @@ trait FileDataSource extends DataSource{
     Source.fromFile(filename).getLines().mkString
   }
 }
-
