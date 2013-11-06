@@ -154,7 +154,7 @@ a:hover{text-decoration: underline;}
 span { /* text blocks within a line */
   position:relative;
   vertical-align: baseline;
-  /* _<id> for spaces may need display:inline, which will override this */ 
+  /* _<id> for spaces may need display:inline, which will override this */
   display:inline-block;
 }
 ._ { /* text shift */
@@ -162,7 +162,7 @@ span { /* text blocks within a line */
   z-index:-1;
 }
 
-@media screen { 
+@media screen {
   #page-container {
     background-color:#eee;
     -moz-transition:left 500ms;
@@ -201,14 +201,14 @@ span { /* text blocks within a line */
 .h0{height:1683.78px;}
 .w0{width:1190.552px;}
 @media print{
-.fs4{font-size:1.320000em;}
-.fs2{font-size:1.740000em;}
-.fs3{font-size:2.070000em;}
-.fs1{font-size:2.250000em;}
-.fs0{font-size:3.450000em;}
-.h6{height:28.236979pt;}
-.h3{height:36.304688pt;}
-.h1{height:88.744792pt;}
-.h0{height:1122.520000pt;}
-.w0{width:793.701333pt;}
+    .fs4{font-size:1.320000em;}
+    .fs2{font-size:1.740000em;}
+    .fs3{font-size:2.070000em;}
+    .fs1{font-size:2.250000em;}
+    .fs0{font-size:3.450000em;}
+    .h6{height:28.236979pt;}
+    .h3{height:36.304688pt;}
+    .h1{height:88.744792pt;}
+    .h0{height:1122.520000pt;}
+    .w0{width:793.701333pt;}
 }

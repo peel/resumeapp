@@ -15,7 +15,7 @@ class DataApiSpec extends Specification{
       "an Author object" in {
         cvData must haveClass[Author]
       }
-      "a Jobs collection" in{
+      "a Jobs collection" in {
         cvData.jobs(0) must haveClass[Job]
       }
       "a Schools collection" in {
@@ -27,7 +27,6 @@ class DataApiSpec extends Specification{
       "an Interests collection" in {
         cvData.interests(0) must haveClass[Interest]
       }
-      "out of JSON configuration"
     }
   }
 }

@@ -1,25 +1,23 @@
 @(name: String, role: String, about: String, contact: Map[String, String], social: Map[String, String])
 
 @covers.main{
-        <div class="pc">
-            <div class="col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3 cover right rightpadding">
-                <div class="ff1 fs0 fc0 sc0 ls0">Thank you,</div>
-                <div class="ff1 fs0 fc1 sc0 ls0">Regards.</div>
-                <div class="ff2 fs2 fc1 sc0 ls0" style="margin:1em 0 0 0;">@Messages("author.name")</div>
+    <div class="col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3 cover right rightpadding">
+        <div class="ff1 fs0 fc0">Thank you,</div>
+        <div class="ff1 fs0 fc1">Regards.</div>
+        <div class="ff2 fs2 fc1" style="margin:1em 0 0 0;">@Messages("author.name")</div>
 
-                <ul class="contactList fs2">
-                    <li class="ff2"><span class="fc0">@Messages("app.phone"):</span> @contact.get("phone")</li>
-                    <li class="ff2"><span class="fc0">@Messages("app.url"):</span> @contact.get("url")</li>
-                    <li class="ff2"><span class="fc0">@Messages("app.email"):</span> @contact.get("email")</li>
-                    <li><p></p></li>
-                    <li class="ff2"><span class="fc0">Twitter:</span> @social.get("twitter")</li>
-                    <li class="ff2"><span class="fc0">Linkedin:</span> @social.get("linkedin")</li>
-                    <li class="ff2"><span class="fc0">GitHub:</span> @social.get("github")</li>
-                </ul>
+        <ul class="contactList fs2">
+            <li class="ff2"><span class="fc0">@Messages("app.phone"):</span> @contact.get("phone")</li>
+            <li class="ff2"><span class="fc0">@Messages("app.url"):</span> @contact.get("url")</li>
+            <li class="ff2"><span class="fc0">@Messages("app.email"):</span> @contact.get("email")</li>
+            <li><p></p></li>
+            <li class="ff2"><span class="fc0">Twitter:</span> @social.get("twitter")</li>
+            <li class="ff2"><span class="fc0">Linkedin:</span> @social.get("linkedin")</li>
+            <li class="ff2"><span class="fc0">GitHub:</span> @social.get("github")</li>
+        </ul>
 
-                <div class="consent fs4 ff2" style="margin:30em 0 0 0;">
-                    <p>@Messages("app.consent")</p>
-                </div>
-            </div>
+        <div class="consent fs4 ff2" style="margin:30em 0 0 0;">
+            <p>@Messages("app.consent")</p>
         </div>
+    </div>
 }
