@@ -1,4 +1,4 @@
-@(company: String, role: String, author: Author, letter: Letter, letterEnabled: Boolean)
+@(company: String, role: String, author: Author, letter: Letter, letterEnabled: Boolean)(implicit request: Request[AnyContent])
 
 @formatter.main(author.name+" - "+author.role+" - "+Messages("application.name")) {
 
