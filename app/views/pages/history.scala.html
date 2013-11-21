@@ -1,4 +1,4 @@
-@(role: String, name: String, jobs: Seq[Job], schools: Seq[School])(implicit request: Request[AnyContent])
+@(role: String, name: String, jobs: Seq[Job], schools: Seq[School])
 
 @htmlJob(job: Job) = @{
     Html("""
@@ -27,7 +27,7 @@
 @formatter.page{
         <!-- nametag header -->
         <div class="row nametag">
-            <img src="@routes.Assets.at("images/photo.png").absoluteURL()" class="col-md-12 col-lg-12"/>
+            <img src="@routes.Assets.at("images/photo.png")" class="col-md-12 col-lg-12"/>
             <div class="ff1 fs0 fc1">@name</div>
             <div class="ff2 fs1 fc1">@role</div>
         </div>
@@ -35,7 +35,7 @@
         <!-- employment history -->
         <div class="row sectionheader">
             <div class="col-md-12 col-lg-12 ff2 fs3 fc2" style="text-align:center;">@Messages("app.title.employment")</div>
-            <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/employment.png").absoluteURL()"/>
+            <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/employment.png")"/>
         </div>
 
         <!-- job -->
@@ -44,7 +44,7 @@
         <!-- education -->
         <div class="row sectionheader">
             <div class="col-md-12 col-lg-12 ff2 fs3 fc2" style="text-align:center;">@Messages("app.title.education")</div>
-            <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/education.png").absoluteURL()"/>
+            <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/education.png")"/>
         </div>
 
         <!-- school -->

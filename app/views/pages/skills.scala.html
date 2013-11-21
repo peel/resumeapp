@@ -1,4 +1,4 @@
-@(competencies: Seq[Competency], interests: Seq[Interest])(implicit request: Request[AnyContent])
+@(competencies: Seq[Competency], interests: Seq[Interest])
 
 @htmlWide(value: PersonValue) =@{
     Html("""
@@ -22,7 +22,7 @@
     <!-- skills -->
     <div class="row pageheader">
         <div class="col-md-12 col-lg-12 ff2 fs3 fc2">@Messages("app.title.skills")</div>
-        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/skills.png").absoluteURL()"/>
+        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/skills.png")"/>
     </div>
 
     <!-- skill -->
@@ -94,7 +94,7 @@
     <!-- competencies -->
     <div class="row sectionheader">
         <div class="col-md-12 col-lg-12 ff2 fs3 fc2" style="text-align:center;">@Messages("app.title.competencies")</div>
-        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/competencies.png").absoluteURL()"/>
+        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/competencies.png")"/>
     </div>
 
     <!-- competency -->
@@ -103,7 +103,7 @@
     <!-- interests -->
     <div class="row sectionheader">
         <div class="col-md-12 col-lg-12 ff2 fs3 fc2" style="text-align:center;">@Messages("app.title.interests")</div>
-        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/interests.png").absoluteURL()"/>
+        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/interests.png")"/>
     </div>
 
     <!-- interest -->

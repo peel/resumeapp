@@ -1,4 +1,4 @@
-@(company: String, role: String, author: Author, letter: Letter)(implicit request: Request[AnyContent])
+@(company: String, role: String, author: Author, letter: Letter)
 @import java.text.SimpleDateFormat
 
 @date = @{
@@ -8,7 +8,7 @@
 @formatter.page{
     <div class="row pageheader">
         <div class="col-md-12 col-lg-12 ff2 fs3 fc2" style="text-align:center;">@Messages("app.title.letter")</div>
-        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/letter.png").absoluteURL()"/>
+        <img class="col-md-12 col-lg-12" src="@routes.Assets.at("images/letter.png")"/>
     </div>
 
     <div class="row" style="margin:0 auto;">
