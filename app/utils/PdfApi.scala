@@ -15,8 +15,5 @@ case class PdfApi(config: PdfConfig) {
 
   private def toBytes(output: ByteArrayOutputStream) = Try(output.toByteArray)
 
-  private def pdfStream(view: String, output: ByteArrayOutputStream) = pdf match{
-    case Success(r) => r.run(view, output)
-    case Failure(e) => e
-  }
+  private def pdfStream(view: String, output: ByteArrayOutputStream) = pdf.map(pdf => pdf.run(view, output))
 }

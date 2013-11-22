@@ -15,9 +15,18 @@ import scala.util.Failure
 
 object Cvs extends Controller {
 
-  val dataApi = new DataApi with FileDataSource
-  val author = dataApi.getCvData[Author]("conf/data.json")
-  val letter = dataApi.getCvData[Letter]("conf/letter.json")
+  private val dataApi = new DataApi with FileDataSource
+  private val author = dataApi.getCvData[Author]("conf/data.json")
+  private val letter = dataApi.getCvData[Letter]("conf/letter.json")
+  private val pdfConfig = new PdfConfig {
+    orientation := Portrait
+    pageSize := "A4"
+    marginTop := "0.2in"
+    marginBottom := "0.2in"
+    marginLeft := "0.2in"
+    marginRight := "0.2in"
+    grayScale := false
+  }
 
   def get(company: String, role: String, letterEnabled: Boolean) = Action{implicit request =>
     Ok(getCvHtml(company, role, letterEnabled))
@@ -32,16 +41,6 @@ object Cvs extends Controller {
         case _ => BadRequest("Ups! something went all awry here.")
       }
     }
-  }
-
-  private def pdfConfig = new PdfConfig {
-    orientation := Portrait
-    pageSize := "A4"
-    marginTop := "0.2in"
-    marginBottom := "0.2in"
-    marginLeft := "0.2in"
-    marginRight := "0.2in"
-    grayScale := false
   }
 
   private def getCvHtml(company: String, role: String, letterEnabled: Boolean): HtmlFormat.Appendable = {
