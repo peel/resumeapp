@@ -12,7 +12,9 @@ import play.api.templates.HtmlFormat
 import scala.util.{Success, Failure}
 import scala.util.Success
 import scala.util.Failure
+import com.wordnik.swagger.annotations.{ApiParam, ApiOperation, Api}
 
+@Api(value="/", description="Operations on CVs")
 object Cvs extends Controller {
 
   private val dataApi = new DataApi with FileDataSource
@@ -29,12 +31,20 @@ object Cvs extends Controller {
     grayScale := false
   }
 
-  def get(company: String, role: String, letterEnabled: Boolean) = Action{implicit request =>
-    Ok(getCvHtml(company, role, letterEnabled))
+  @ApiOperation(value="Get a HTML CV for company and role", notes="Returns a HTML CV page", httpMethod="GET")
+  def getHtml(@ApiParam(value="Company to which the CV is addressed")company: String, 
+              @ApiParam(value="Role for which the CV is applied") role: String,
+              @ApiParam(value="Should letter be attached") letterEnabled: Boolean
+             ) = Action{implicit request =>
+    Ok(cvFormat(company, role, letterEnabled))
   }
 
-  def getPdf(company: String, role: String, letterEnabled: Boolean) = Action{implicit request =>
-    val view = getCvHtml(company, role, letterEnabled).body
+  @ApiOperation(value="Get a PDF CV for company and role", notes="Returns a HTML CV page", httpMethod="GET")
+  def getPdf(@ApiParam(value="Company to which the CV is addressed")company: String, 
+             @ApiParam(value="Role for which the CV is applied") role: String, 
+             @ApiParam(value="Should letter be attached") letterEnabled: Boolean
+            ) = Action{implicit request =>
+    val view = cvFormat(company, role, letterEnabled).body
     PdfApi(pdfConfig).getPdf(view) match {
       case Success(r) => Ok(r).as("application/pdf")
       case Failure(e) => e match {
@@ -44,7 +54,7 @@ object Cvs extends Controller {
     }
   }
 
-  private def getCvHtml(company: String, role: String, letterEnabled: Boolean): HtmlFormat.Appendable = {
+  private def cvFormat(company: String, role: String, letterEnabled: Boolean): HtmlFormat.Appendable = {
     views.html.cv(company, role, author, letter, letterEnabled)
   }
 

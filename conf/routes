@@ -2,11 +2,18 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
-GET        /                    controllers.Cvs.get(company: String = "", role: String = "Java Developer", letter: Boolean = false)
-GET        /:company            controllers.Cvs.get(company: String, role: String ?="Java Developer", letter: Boolean ?= false)
-GET        /print/              controllers.Cvs.getPdf(company: String = "", role: String = "Java Developer", letter: Boolean = false)
-GET        /print/:company      controllers.Cvs.getPdf(company: String, role: String ?="Java Developer", letter: Boolean ?= false)
+# API
+GET        /api-docs               controllers.ApiHelpController.getResources
+
+# HTML
+GET        /api-docs/html         controllers.ApiHelpController.getResource(path = "/")
+GET        /                      controllers.Cvs.getHtml(company: String = "", role: String = "Java Developer", letter: Boolean = false)
+GET        /:company              controllers.Cvs.getHtml(company: String, role: String ?="Java Developer", letter: Boolean ?= false)
+
+# PDF
+GET        /api-docs/print         controllers.ApiHelpController.getResource(path = "/print/")
+GET        /print/                controllers.Cvs.getPdf(company: String = "", role: String = "Java Developer", letter: Boolean = false)
+GET        /print/:company        controllers.Cvs.getPdf(company: String, role: String ?="Java Developer", letter: Boolean ?= false)
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET        /assets/*file          controllers.Assets.at(path="/public", file)
