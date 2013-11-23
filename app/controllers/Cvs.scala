@@ -25,6 +25,7 @@ object Cvs extends Controller {
     marginBottom := "0.2in"
     marginLeft := "0.2in"
     marginRight := "0.2in"
+    zoom := 0.9F
     grayScale := false
   }
 
